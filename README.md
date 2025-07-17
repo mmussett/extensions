@@ -1,5 +1,12 @@
 # TIBCO Flogo® Extension for Visual Studio Code
 
-| Extension Name | Version |
-|----------------|---------|
-| [gcp](https://github.com/mmussett/extensions/blob/main/gcp/README.md)            | 1.1.0   |
+## Activities, Triggers, and Connections
+
+[GCP](https://github.com/mmussett/extensions/blob/main/gcp/README.md)
+
+
+## Version History
+
+| Extension Name | Version | Last Change |
+|----------------|---------|-------------|
+| gcp            | 1.1.0   | 17th July 2025, Migrated from https://github.com/mmussett/tci-flogo-contrib
