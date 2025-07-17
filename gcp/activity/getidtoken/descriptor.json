@@ -6,7 +6,7 @@
     "type": "flogo:activity",
      
     "display": {
-       "category": "GCP",
+       "category": "gcp",
        "visible": true,
        "smallIcon": "icons/gcp-getidtoken@2x.png",
        "largeIcon": "icons/gcp-getidtoken@3x.png",

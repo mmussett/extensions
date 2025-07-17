@@ -1,4 +1,4 @@
-module github.com/mmussett/flogo/extensions/gcp
+module github.com/mmussett/extensions/gcp
 
 go 1.23.0
 
