@@ -68,7 +68,7 @@ The Input Settings tab has the following fields:
 
 | Field	| Required	| Description |
 |-------|-----------|-------------|
-| url   | true      | URL of the IAM Service Account Credentials API |
+| cmd   | true      | The command to run |
 
 
 ## Input
@@ -81,10 +81,8 @@ The Output Settings tab has the following field:
 
 | Field	| Description |
 |-------|-------------|
-| accessToken | The granted access token |
-| tokenType | The access token type i.e Bearer |
-| refreshToken | Refresh token |
-| expiry | Access token expiry timestamp |
+| stdOut | StdOut capture |
+
 
 ## Loop
 
