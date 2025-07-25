@@ -38,7 +38,7 @@ var core_1 = require("@angular/core"),
     http_1 = require("@angular/http"),
     Observable_1 = require("rxjs/Observable"),
     wi_contrib_1 = require("wi-studio/app/contrib/wi-contrib"),
-    activity_jsonschema_1 = require("./activity.jsonschema"),
+    //activity_jsonschema_1 = require("./activity.jsonschema"),
     runHandler = (function (t) {
         function e(e, n) {
             var r = t.call(this, e, n) || this;
@@ -47,13 +47,13 @@ var core_1 = require("@angular/core"),
                 (r.http = n),
                 (r.value = function (t, e) {
                     r.getContextVar(e, "SSH Connection");
-                    var n = r.getContextVarBool(e, "processdata"),
-                        i = r.getContextVarBool(e, "binary");
+                    //var n = r.getContextVarBool(e, "processdata"),
+                    //    i = r.getContextVarBool(e, "binary");
                     switch (t) {
                         case "SSH Connection":
                             return Observable_1.Observable.create(function (t) {
                                 var e = [];
-                                wi_contrib_1.WiContributionUtils.getConnections(r.http, r.category).subscribe(function (n) {
+                                wi_contrib_1.WiContributionUtils.getConnections(r.http, "SSH").subscribe(function (n) {
                                     n.forEach(function (t) {
                                         for (var n = 0; n < t.settings.length; n++)
                                             if ("name" === t.settings[n].name) {
@@ -66,18 +66,18 @@ var core_1 = require("@angular/core"),
                             });
                         case "input":
                             return null;
-                            return Observable_1.Observable.create(function (t) {
-                                !0 === n ? t.next(JSON.stringify(activity_jsonschema_1.Schema.PROCESS_DATA_INPUT)) : t.next(JSON.stringify(activity_jsonschema_1.Schema.FILE_TRANSFER_INPUT));
-                            });
+                            // return Observable_1.Observable.create(function (t) {
+                            //    !0 === n ? t.next(JSON.stringify(activity_jsonschema_1.Schema.PROCESS_DATA_INPUT)) : t.next(JSON.stringify(activity_jsonschema_1.Schema.FILE_TRANSFER_INPUT));
+                            //});
                         case "output":
                             return null;
-                            return Observable_1.Observable.create(function (t) {
-                                !0 === n && !0 === i
-                                    ? t.next(JSON.stringify(activity_jsonschema_1.Schema.PROCESS_DATA_BINARY_OUTPUT))
-                                    : !0 === n && !1 === i
-                                    ? t.next(JSON.stringify(activity_jsonschema_1.Schema.PROCESS_DATA_OUTPUT))
-                                    : t.next(JSON.stringify(activity_jsonschema_1.Schema.FILE_TRANSFER_OUTPUT));
-                            });
+                            //return Observable_1.Observable.create(function (t) {
+                            //    !0 === n && !0 === i
+                            //        ? t.next(JSON.stringify(activity_jsonschema_1.Schema.PROCESS_DATA_BINARY_OUTPUT))
+                            //        : !0 === n && !1 === i
+                            //        ? t.next(JSON.stringify(activity_jsonschema_1.Schema.PROCESS_DATA_OUTPUT))
+                            //        : t.next(JSON.stringify(activity_jsonschema_1.Schema.FILE_TRANSFER_OUTPUT));
+                            //});
                         default:
                             return null;
                     }
