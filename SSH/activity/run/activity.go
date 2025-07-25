@@ -31,9 +31,6 @@ func (*MyActivity) Metadata() *activity.Metadata {
 // Eval implements activity.Activity.Eval
 func (activity *MyActivity) Eval(context activity.Context) (done bool, err error) {
 
-	logger := context.Logger()
-	logger.Info("Executing SSH Run Activitiy")
-	
 	input := &Input{}
 	output := &Output{}
 
